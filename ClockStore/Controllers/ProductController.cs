@@ -43,6 +43,7 @@ namespace ClockStore.Controllers
             if (id.HasValue)
             {
                 Product p = _products.Single(x => x.ID == id.Value);
+                return View(p);
             }
             return NotFound();
         }
